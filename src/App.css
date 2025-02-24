@@ -1,0 +1,53 @@
+/* ✅ 다크 모드 토글 버튼 */
+.toggle-dark-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 70px; /* ✅ 스위치 크기 조정 */
+  height: 34px;
+  background: linear-gradient(135deg, #dcdcdc, #ffffff);
+  border-radius: 34px;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* ✅ 스위치 내부 아이콘 */
+.toggle-slider {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* ✅ 기본 상태 (라이트 모드) */
+.toggle-slider::before {
+  content: "☀️"; /* 해 아이콘 */
+}
+
+/* ✅ 다크 모드 버튼 스타일 */
+body.dark-mode .toggle-dark-mode {
+  background: linear-gradient(135deg, #444, #222);
+  border: 2px solid #666;
+}
+
+/* ✅ 다크 모드에서 슬라이드 원 이동 */
+body.dark-mode .toggle-slider {
+  transform: translateX(34px);
+  background: #f1c40f; /* ✅ 해 아이콘 색상 (노란색) */
+}
+
+/* ✅ 다크 모드에서 아이콘 변경 */
+body.dark-mode .toggle-slider::before {
+  content: "🌙"; /* 달 아이콘 */
+}

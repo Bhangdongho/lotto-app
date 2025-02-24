@@ -1,0 +1,106 @@
+.pension-generator {
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 기본 스타일 (라이트 모드) */
+.pension-generator {
+  background: white;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 다크 모드 */
+.pension-generator.dark {
+  background: #1e1e1e;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.pension-generator h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* 버튼 기본 스타일 */
+.pension-generator button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.pension-generator button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* 다크 모드 버튼 스타일 */
+.pension-generator.dark button {
+  background: #0056b3;
+}
+
+.pension-generator.dark button:hover {
+  background: #003f7f;
+}
+
+/* 연금 복권 번호 스타일 */
+.pension-generator .pension-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* 연금 복권 번호 (이중 테두리 원형 디자인) */
+.pension-ball {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* ✅ 로또 번호와 동일한 크기 */
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black; /* ✅ 다크 모드에서도 선명한 가독성 */
+  background: white; /* ✅ 모든 모드에서 하얀색 배경 유지 */
+  border: 3px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* ✅ 입체감 추가 */
+}
+
+/* 다크 모드에서 연금 복권 번호 스타일 */
+.pension-generator.dark .pension-ball {
+  background: white; /* ✅ 다크 모드에서도 구는 하얀색 유지 */
+  color: black; /* ✅ 가독성 유지 */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* 숫자별 테두리 색상 */
+.pension-ball.range-1 {
+  border-color: #e74c3c; /* 빨강 */
+}
+.pension-ball.range-2 {
+  border-color: #e67e22; /* 오렌지 */
+}
+.pension-ball.range-3 {
+  border-color: #f1c40f; /* 노랑 */
+}
+.pension-ball.range-4 {
+  border-color: #3498db; /* 파랑 */
+}
+.pension-ball.range-5 {
+  border-color: #9b59b6; /* 보라 */
+}
+.pension-ball.range-6 {
+  border-color: #7f8c8d; /* 회색 */
+}

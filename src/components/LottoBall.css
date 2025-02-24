@@ -1,0 +1,29 @@
+.lotto-ball {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* 원 크기 */
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white; /* 번호 색상 고정 */
+  margin: 5px;
+}
+
+/* 숫자 범위별 색상 */
+.lotto-ball.range-1 {
+  background-color: #f4b400;
+} /* 1~9 (노란색) */
+.lotto-ball.range-2 {
+  background-color: #4072ab !important;
+} /* 10~19 (파란색) */
+.lotto-ball.range-3 {
+  background-color: #dd4b10 !important;
+} /* 20~29 (회색) */
+.lotto-ball.range-4 {
+  background-color: #9195a4 !important;
+} /* 30~39 (어두운 회색) */
+.lotto-ball.range-5 {
+  background-color: #15be4b !important;
+} /* 40~45 (초록색) */
